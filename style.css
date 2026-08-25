@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #29245c 0%, #111225 45%, #090a13 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: rgba(8, 9, 20, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+.balance {
+    background: #1c1d35;
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #facc15;
+    font-weight: bold;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 40px auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #a7a9c5;
+}
+
+.mode-card,
+.game-card,
+.topup-card {
+    background: rgba(25, 26, 48, 0.92);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.mode-buttons button,
+.topup-buttons button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background: #30324f;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.mode-buttons button:hover,
+.topup-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.mode-buttons button.active {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+}
+
+#modeInfo {
+    color: #a7a9c5;
+    margin-top: 15px;
+}
+
+.game-card {
+    text-align: center;
+}
+
+.reels {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0e1d;
+    border: 2px solid #44476b;
+    border-radius: 16px;
+    font-size: 50px;
+}
+
+.reel.spin {
+    animation: spin 0.15s infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+.cost {
+    color: #aaa;
+    margin-bottom: 18px;
+}
+
+.play-button {
+    width: 220px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(139,92,246,0.35);
+}
+
+.play-button:hover {
+    transform: translateY(-2px);
+}
+
+.play-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#result {
+    min-height: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #facc15;
+}
+
+.topup-card p {
+    color: #a7a9c5;
+    margin-bottom: 18px;
+}
+
+.topup-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.topup-buttons button {
+    background: #059669;
+}
+
+footer {
+    text-align: center;
+    color: #70738f;
+    padding: 30px 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .balance {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .reel {
+        width: 80px;
+        height: 80px;
+        font-size: 38px;
+    }
+
+    .play-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Game Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">VIRTUAL<span>PLAY</span></div>
+
+        <div class="balance">
+            🪙 <span id="balance">1000</span> Koin
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Virtual Game Simulator</h1>
+            <p>Simulator hiburan menggunakan koin virtual.</p>
+        </section>
+
+        <section class="mode-card">
+            <h2>Pilih Mode</h2>
+
+            <div class="mode-buttons">
+                <button id="defaultBtn" class="active">
+                    Default
+                </button>
+
+                <button id="demoBtn">
+                    Demo
+                </button>
+            </div>
+
+            <p id="modeInfo">
+                Mode Default aktif.
+            </p>
+        </section>
+
+        <section class="game-card">
+
+            <h2>🎰 Lucky Reels</h2>
+
+            <div class="reels">
+                <div class="reel" id="reel1">🍒</div>
+                <div class="reel" id="reel2">⭐</div>
+                <div class="reel" id="reel3">💎</div>
+            </div>
+
+            <div class="cost">
+                Biaya permainan: <strong>10 koin virtual</strong>
+            </div>
+
+            <button id="playBtn" class="play-button">
+                MAIN
+            </button>
+
+            <p id="result">Tekan MAIN untuk memulai.</p>
+
+        </section>
+
+        <section class="topup-card">
+            <h2>🪙 Koin Virtual</h2>
+
+            <p>
+                Tambahkan koin untuk keperluan simulasi.
+                Koin ini tidak memiliki nilai uang.
+            </p>
+
+            <div class="topup-buttons">
+                <button data-amount="100">+100</button>
+                <button data-amount="500">+500</button>
+                <button data-amount="1000">+1000</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        VirtualPlay © 2026 — Simulator hiburan, bukan perjudian uang nyata.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
